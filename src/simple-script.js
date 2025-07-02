@@ -434,7 +434,7 @@ async function initiatePixPayment() {
         };
 
         // ATENÇÃO: Verifique se esta é a URL correta do seu servidor no Render.
-        const response = await fetch('https://api-pix-mercadopago.onrender.com/create_payment', {
+        const response = await fetch('https://dzn.onrender.com/create_payment', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(dadosDoPedido),
