@@ -5,493 +5,96 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Açaí Em Casa - O Melhor da Cidade</title>
+    
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    
     <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
-  <div id="mobile-banner">
-  <img src="p.png" alt="Banner de Promoção" />
-</div>
-
+    <div id="mobile-banner">
+      <img src="p.png" alt="Banner de Promoção" />
+    </div>
     <div class="banner"></div>
-
     <div class="container">
-
       <section class="section">
         <h2 class="section-title">Copos</h2>
         <div class="products-grid">
-          <div class="product-card">
-            <img src="/copo.png" alt="Copo de 250ml" />
-            <h3>Copo de 250ml</h3>
-            <div class="price">R$ 12,00</div>
-            <p class="complements-info">4 complementos</p>
-            <button class="select-btn" data-product-id="copo250" onclick="selectProduct('copo250')">
-              Selecionar
-            </button>
-          </div>
-
-          <div class="product-card">
-            <img src="/copo.png" alt="Copo de 300ml" />
-            <h3>Copo de 300ml</h3>
-            <div class="price">R$ 14,00</div>
-            <p class="complements-info">4 complementos</p>
-            <button class="select-btn" data-product-id="copo300" onclick="selectProduct('copo300')">
-              Selecionar
-            </button>
-          </div>
-
-          <div class="product-card">
-            <img src="/copo.png" alt="Copo de 400ml" />
-            <h3>Copo de 400ml</h3>
-            <div class="price">R$ 18,00</div>
-            <p class="complements-info">4 complementos</p>
-            <button class="select-btn" data-product-id="copo400" onclick="selectProduct('copo400')">
-              Selecionar
-            </button>
-          </div>
+          <div class="product-card"><img src="/copo.png" alt="Copo de 250ml" /><h3>Copo de 250ml</h3><div class="price">R$ 12,00</div><p class="complements-info">4 complementos</p><button class="select-btn" onclick="selectProduct('copo250')">Selecionar</button></div>
+          <div class="product-card"><img src="/copo.png" alt="Copo de 300ml" /><h3>Copo de 300ml</h3><div class="price">R$ 14,00</div><p class="complements-info">4 complementos</p><button class="select-btn" onclick="selectProduct('copo300')">Selecionar</button></div>
+          <div class="product-card"><img src="/copo.png" alt="Copo de 400ml" /><h3>Copo de 400ml</h3><div class="price">R$ 18,00</div><p class="complements-info">4 complementos</p><button class="select-btn" onclick="selectProduct('copo400')">Selecionar</button></div>
         </div>
       </section>
-
       <section class="section">
         <h2 class="section-title">Tigelas</h2>
         <div class="products-grid">
-          <div class="product-card">
-            <img src="/tigela.png" alt="Tigela de 300ml" />
-            <h3>Tigela de 300ml</h3>
-            <div class="price">R$ 15,00</div>
-            <p class="complements-info">4 complementos</p>
-            <button class="select-btn" data-product-id="tigela300" onclick="selectProduct('tigela300')">
-              Selecionar
-            </button>
-          </div>
-
-          <div class="product-card">
-            <img src="/tigela.png" alt="Tigela de 400ml" />
-            <h3>Tigela de 400ml</h3>
-            <div class="price">R$ 19,00</div>
-            <p class="complements-info">4 complementos</p>
-            <button class="select-btn" data-product-id="tigela400" onclick="selectProduct('tigela400')">
-              Selecionar
-            </button>
-          </div>
-
-          <div class="product-card">
-            <img src="/tigela.png" alt="Tigela de 700ml" />
-            <h3>Tigela de 700ml</h3>
-            <div class="price">R$ 35,00</div>
-            <p class="complements-info">7 complementos</p>
-            <button class="select-btn" data-product-id="tigela700" onclick="selectProduct('tigela700')">
-              Selecionar
-            </button>
-          </div>
+          <div class="product-card"><img src="/tigela.png" alt="Tigela de 300ml" /><h3>Tigela de 300ml</h3><div class="price">R$ 15,00</div><p class="complements-info">4 complementos</p><button class="select-btn" onclick="selectProduct('tigela300')">Selecionar</button></div>
+          <div class="product-card"><img src="/tigela.png" alt="Tigela de 400ml" /><h3>Tigela de 400ml</h3><div class="price">R$ 19,00</div><p class="complements-info">4 complementos</p><button class="select-btn" onclick="selectProduct('tigela400')">Selecionar</button></div>
+          <div class="product-card"><img src="/tigela.png" alt="Tigela de 700ml" /><h3>Tigela de 700ml</h3><div class="price">R$ 35,00</div><p class="complements-info">7 complementos</p><button class="select-btn" onclick="selectProduct('tigela700')">Selecionar</button></div>
         </div>
       </section>
-
       <section class="section">
         <h2 class="section-title">Barcas</h2>
         <div class="products-grid">
-          <div class="product-card">
-            <img src="/barca.png" alt="Barca Pequena" />
-            <h3>Barca Pequena</h3>
-            <div class="price">R$ 35,00</div>
-            <button class="select-btn" data-product-id="barcaP" onclick="selectProduct('barcaP')">
-              Selecionar
-            </button>
-          </div>
-
-          <div class="product-card">
-            <img src="/barca.png" alt="Barca Grande" />
-            <h3>Barca Grande</h3>
-            <div class="price">R$ 65,00</div>
-            <button class="select-btn" data-product-id="barcaG" onclick="selectProduct('barcaG')">
-              Selecionar
-            </button>
-          </div>
+          <div class="product-card"><img src="/barca.png" alt="Barca Pequena" /><h3>Barca Pequena</h3><div class="price">R$ 35,00</div><button class="select-btn" onclick="selectProduct('barcaP')">Selecionar</button></div>
+          <div class="product-card"><img src="/barca.png" alt="Barca Grande" /><h3>Barca Grande</h3><div class="price">R$ 65,00</div><button class="select-btn" onclick="selectProduct('barcaG')">Selecionar</button></div>
         </div>
       </section>
-
-      <section class="delivery-section">
+      <section id="delivery-section" class="delivery-section">
         <h3>Opções de Entrega</h3>
         <div class="delivery-options-wrapper">
-          <div class="delivery-option">
-            <input type="checkbox" id="delivery-checkbox" onchange="handleDeliveryChange(this)" />
-            <label for="delivery-checkbox">Entrega (R$ 2,00)</label>
-          </div>
-
-          <div class="delivery-option">
-            <input type="checkbox" id="pickup-checkbox" onchange="handlePickupChange(this)" />
-            <label for="pickup-checkbox">Retirada (sem taxa)</label>
-          </div>
+          <div class="delivery-option"><input type="checkbox" id="delivery-checkbox" onchange="handleDeliveryChange(this)" /><label for="delivery-checkbox">Entrega (R$ 2,00)</label></div>
+          <div class="delivery-option"><input type="checkbox" id="pickup-checkbox" onchange="handlePickupChange(this)" /><label for="pickup-checkbox">Retirada (sem taxa)</label></div>
         </div>
       </section>
-
       <div id="payment-section" style="margin-top: 20px;">
         <h3>Forma de pagamento</h3>
         <div class="payment-options">
-          <div class="payment-card" data-method="pix" onclick="selectPaymentMethod('pix')">
-            <img src="/icons/pix.png" alt="Pix">
-            <div>Pix</div>
-          </div>
-
-          <div class="payment-card" data-method="especie" onclick="selectPaymentMethod('especie')">
-            <img src="/icons/money.png" alt="Dinheiro">
-            <div>Dinheiro</div>
-          </div>
-
-          <div class="payment-card" data-method="cartao" onclick="selectPaymentMethod('cartao')">
-            <img src="/icons/card.png" alt="Cartão">
-            <div>Cartão</div>
-          </div>
+          <div class="payment-card" data-method="pix" onclick="selectPaymentMethod('pix')"><img src="/icons/pix.png" alt="Pix" /><div>Pix</div></div>
+          <div class="payment-card" data-method="especie" onclick="selectPaymentMethod('especie')"><img src="/icons/money.png" alt="Dinheiro" /><div>Dinheiro</div></div>
+          <div class="payment-card" data-method="cartao" onclick="selectPaymentMethod('cartao')"><img src="/icons/card.png" alt="Cartão" /><div>Cartão</div></div>
         </div>
-
-        <input type="radio" name="payment" value="pix" style="display: none;">
-        <input type="radio" name="payment" value="especie" style="display: none;">
-        <input type="radio" name="payment" value="cartao" style="display: none;">
-
-        <div id="troco-section" style="display: none;">
-          <label>Troco para quanto? R$
-            <input type="number" id="troco-value" min="0" step="0.01">
-          </label>
-        </div>
+        <div id="troco-section" style="display: none;"><label>Troco para quanto? R$<input type="number" id="troco-value" min="0" step="0.01" /></label></div>
       </div>
-
       <section class="section">
         <h3>Seu nome</h3>
-        <input type="text" id="customer-name" placeholder="Digite seu nome" />
+        <input type="text" id="customer-name" placeholder="Digite seu nome completo" oninput="updateTotal()"/>
       </section>
-
-      <section class="section" id="old-cart-section" style="display: none;">
-        <h3>Pedidos adicionados (OLD)</h3>
-        <ul id="cart-list-old" style="list-style: none; padding-left: 0;"></ul>
-        <button onclick="clearCart()">Limpar tudo e recomeçar</button>
-      </section>
-
       <section class="summary-section">
-        <div class="total-price">
-          Total: <span id="total-price">R$ 0,00</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <button class="confirm-btn" id="confirm-all-btn" onclick="confirmAllOrders()" disabled>Enviar Pedido</button>
-        </div>
+        <div class="total-price">Total: <span id="total-price">R$ 0,00</span></div>
+        <div style="display: flex; flex-direction: column; gap: 10px;"><button class="confirm-btn" id="confirm-all-btn" onclick="confirmAllOrders()" disabled>Enviar Pedido</button></div>
       </section>
     </div>
-    <div class="finalizar-pedido-container" style="padding: 20px; text-align: center;">
-    
-    <button id="checkout-btn" style="background-color: #00b14f; color: white; padding: 15px 30px; font-size: 1.2em; border: none; border-radius: 8px; cursor: pointer;">
-        Finalizar e Pagar com Pix
-    </button>
-
-    <div id="pix-container" style="display: none; margin-top: 30px;">
-        <h3 style="color: #51125e;">Escaneie o QR Code ou copie o código abaixo:</h3>
-        
-        <img id="qr-code-image" src="" alt="QR Code Pix" style="max-width: 280px; margin: 15px auto; display: block; border: 2px solid #eee; border-radius: 8px; padding: 5px;">
-        
-        <input type="text" id="qr-code-text" readonly style="width: 100%; max-width: 400px; padding: 10px; text-align: center; font-size: 0.9em; margin: 10px auto; border: 1px solid #ccc; border-radius: 5px;">
-        
-        <button id="copy-btn" style="background-color: #51125e; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-            Copiar Código Pix
-        </button>
-
-        <p style="margin-top: 20px; font-size: 0.8em; color: #666;">
-            Após o pagamento, seu pedido será confirmado automaticamente.
-        </p>
-    </div>
-</div>
-    <button class="floating-cart-btn" onclick="openCartModal()">
-        <img src="/icons/cart.png" alt="Meu Carrinho">
-        <span id="cart-count">0</span>
-    </button>
-
+    <button class="floating-cart-btn" onclick="openCartModal()"><img src="/icons/cart.png" alt="Meu Carrinho" /><span id="cart-count">0</span></button>
     <div id="cart-modal-overlay">
-  <div id="cart-modal-content">
-    <button class="close-modal-btn" onclick="closeCartModal()">X</button>
-    <h3>Seu Carrinho</h3>
-    <ul id="cart-modal-list"></ul>
-    <div class="modal-total-price">
-        Total: <span id="modal-total-price">R$ 0,00</span>
+      <div id="cart-modal-content">
+        <button class="close-modal-btn" onclick="closeCartModal()">X</button>
+        <h3>Seu Carrinho</h3>
+        <ul id="cart-modal-list"></ul>
+        <div class="modal-total-price">Total: <span id="modal-total-price">R$ 0,00</span></div>
+        <div class="modal-cart-actions">
+          <button class="modal-action-btn continue-shopping" onclick="closeCartModal()">Selecionar mais itens</button>
+          <button class="modal-action-btn confirm-order" onclick="confirmAllOrders()">Enviar Pedido</button>
+        </div>
+        <button class="modal-clear-cart-btn" onclick="clearCart()">Limpar Carrinho</button>
+      </div>
     </div>
-
-    <div class="modal-cart-actions">
-        <button class="modal-action-btn continue-shopping" onclick="closeCartModal()">
-            Selecionar mais itens
-        </button>
-        <button class="modal-action-btn confirm-order" onclick="confirmAllOrders()">
-            Enviar Pedido
-        </button>
-    </div>
-    <button class="modal-clear-cart-btn" onclick="clearCart()">Limpar Carrinho</button>
-</div>
-    </div>
-
     <div id="complements-modal-overlay">
-  <div id="complements-modal-content">
-
-    <button class="close-modal-btn" onclick="cancelComplementsSelection()">X</button>
-    <h3>Escolha seus complementos</h3>
-    <div id="complement-limit-info-modal"></div>
-
-    <div class="complements-scroll-area">
-      <div class="complement-category">
-        <h4>Complementos Grátis</h4>
-        <div class="complements-grid">
-          <div class="complement-item">
-            <input type="checkbox" id="leite_po" data-complement-id="leite_po" data-price="0" onchange="toggleComplement('leite_po', this.checked)" />
-            <label for="leite_po">Leite em pó</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="castanha" data-complement-id="castanha" data-price="0" onchange="toggleComplement('castanha', this.checked)" />
-            <label for="castanha">Castanha</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="amendoim" data-complement-id="amendoim" data-price="0" onchange="toggleComplement('amendoim', this.checked)" />
-            <label for="amendoim">Amendoim</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="granola" data-complement-id="granola" data-price="0" onchange="toggleComplement('granola', this.checked)" />
-            <label for="granola">Granola</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="sucrilhos" data-complement-id="sucrilhos" data-price="0" onchange="toggleComplement('sucrilhos', this.checked)" />
-            <label for="sucrilhos">Sucrilhos</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="tapioca" data-complement-id="tapioca" data-price="0" onchange="toggleComplement('tapioca', this.checked)" />
-            <label for="tapioca">Tapioca</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="pacoca" data-complement-id="pacoca" data-price="0" onchange="toggleComplement('pacoca', this.checked)" />
-            <label for="pacoca">Paçoca</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="cereja" data-complement-id="cereja" data-price="0" onchange="toggleComplement('cereja', this.checked)" />
-            <label for="cereja">Cereja</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="choco_power" data-complement-id="choco_power" data-price="0" onchange="toggleComplement('choco_power', this.checked)" />
-            <label for="choco_power">Choco Power</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="flocos_arroz" data-complement-id="flocos_arroz" data-price="0" onchange="toggleComplement('flocos_arroz', this.checked)" />
-            <label for="flocos_arroz">Flocos de arroz</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="marshmallow" data-complement-id="marshmallow" data-price="0" onchange="toggleComplement('marshmallow', this.checked)" />
-            <label for="marshmallow">Marshmallow</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="jujuba" data-complement-id="jujuba" data-price="0" onchange="toggleComplement('jujuba', this.checked)" />
-            <label for="jujuba">Jujuba</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="mm" data-complement-id="mm" data-price="0" onchange="toggleComplement('mm', this.checked)" />
-            <label for="mm">M&M</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="bolacha" data-complement-id="bolacha" data-price="0" onchange="toggleComplement('bolacha', this.checked)" />
-            <label for="bolacha">Bolacha</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="bolacha_trit" data-complement-id="bolacha_trit" data-price="0" onchange="toggleComplement('bolacha_trit', this.checked)" />
-            <label for="bolacha_trit">Bolacha (triturado)</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="bolacha_triunfo" data-complement-id="bolacha_triunfo" data-price="0" onchange="toggleComplement('bolacha_triunfo', this.checked)" />
-            <label for="bolacha_triunfo">Bolacha (Triunfo)</label>
-        </div>
-          <div class="complement-item">
-            <input type="checkbox" id="chocolate_trit" data-complement-id="chocolate_trit" data-price="0" onchange="toggleComplement('chocolate_trit', this.checked)" />
-            <label for="chocolate_trit">Chocolate (triturado)</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="granulado" data-complement-id="granulado" data-price="0" onchange="toggleComplement('granulado', this.checked)" />
-            <label for="granulado">Granulado</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="complement-category">
-        <h4>Frutas</h4>
-        <div class="complements-grid">
-           <div class="complement-item">
-            <input type="checkbox" id="banana" data-complement-id="banana" data-price="0" onchange="toggleComplement('banana', this.checked)" />
-            <label for="banana">Banana</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="uva" data-complement-id="uva" data-price="0" onchange="toggleComplement('uva', this.checked)" />
-            <label for="uva">Uva</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="complement-category">
-        <h4>Coberturas</h4>
-        <div class="complements-grid">
-          <div class="complement-item">
-            <input type="checkbox" id="cob_chocolate" data-complement-id="cob_chocolate" data-price="0" onchange="toggleComplement('cob_chocolate', this.checked)" />
-            <label for="cob_chocolate">Chocolate</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="cob_morango" data-complement-id="cob_morango" data-price="0" onchange="toggleComplement('cob_morango', this.checked)" />
-            <label for="cob_morango">Morango</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="cob_caramelo" data-complement-id="cob_caramelo" data-price="0" onchange="toggleComplement('cob_caramelo', this.checked)" />
-            <label for="cob_caramelo">Caramelo</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="cob_uva" data-complement-id="cob_uva" data-price="0" onchange="toggleComplement('cob_uva', this.checked)" />
-            <label for="cob_uva">Uva</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="cob_abacaxi" data-complement-id="cob_abacaxi" data-price="0" onchange="toggleComplement('cob_abacaxi', this.checked)" />
-            <label for="cob_abacaxi">Abacaxi</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="leite_condensado" data-complement-id="leite_condensado" data-price="0" onchange="toggleComplement('leite_condensado', this.checked)" />
-            <label for="leite_condensado">Leite condensado</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="cob_kiwi" data-complement-id="cob_kiwi" data-price="0" onchange="toggleComplement('cob_kiwi', this.checked)" />
-            <label for="cob_kiwi">Kiwi</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="complement-category">
-        <h4>Adicionais Pagos (R$ 2,00 cada)</h4>
-        <div class="complements-grid">
-           <div class="complement-item">
-            <input type="checkbox" id="nutella" data-complement-id="nutella" data-price="2" onchange="toggleComplement('nutella', this.checked)" />
-            <label for="nutella">Nutella</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="doce_leite" data-complement-id="doce_leite" data-price="2" onchange="toggleComplement('doce_leite', this.checked)" />
-            <label for="doce_leite">Doce de leite</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="kiwi" data-complement-id="kiwi" data-price="2" onchange="toggleComplement('kiwi', this.checked)" />
-            <label for="kiwi">Kiwi</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="complement-category">
-        <h4>Cremes (R$ 2,00 cada)</h4>
-        <div class="complements-grid">
-          <div class="complement-item">
-            <input type="checkbox" id="creme_ninho" data-complement-id="creme_ninho" data-price="2" onchange="toggleComplement('creme_ninho', this.checked)" />
-            <label for="creme_ninho">Ninho</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="creme_bacuri" data-complement-id="creme_bacuri" data-price="2" onchange="toggleComplement('creme_bacuri', this.checked)" />
-            <label for="creme_bacuri">Bacuri</label>
-          </div>
-          <div class="complement-item">
-            <input type="checkbox" id="creme_maracuja" data-complement-id="creme_maracuja" data-price="2" onchange="toggleComplement('creme_maracuja', this.checked)" />
-            <label for="creme_maracuja">Maracujá</label>
-          </div>
+      <div id="complements-modal-content">
+        <button class="close-modal-btn" onclick="cancelComplementsSelection()">X</button>
+        <h3>Escolha seus complementos</h3>
+        <div id="complement-limit-info-modal"></div>
+        <div class="complements-scroll-area">
+          </div>
+        <div class="complement-modal-actions">
+          <button class="confirm-complement-btn" onclick="confirmComplementsAndAddToCart()">Confirmar e Adicionar</button>
+          <button class="cancel-complement-btn" onclick="cancelComplementsSelection()">Cancelar</button>
         </div>
       </div>
     </div>
-    <div class="complement-modal-actions">
-        <button class="confirm-complement-btn" onclick="confirmComplementsAndAddToCart()">Confirmar e Adicionar</button>
-        <button class="cancel-complement-btn" onclick="cancelComplementsSelection()">Cancelar</button>
-    </div>
-
-  </div>
-</div>
-
     <footer class="footer">
       <p>Nossa Senhora dos Remédios – PI</p>
       <p>Instagram: @acaiemcasa_nsr</p>
     </footer>
-
     <script src="/src/simple-script.js"></script>
-    <script>
-    // Pega os elementos do HTML que acabamos de criar
-    const checkoutButton = document.getElementById('checkout-btn');
-    const pixContainer = document.getElementById('pix-container');
-    const qrCodeImage = document.getElementById('qr-code-image');
-    const qrCodeText = document.getElementById('qr-code-text');
-    const copyButton = document.getElementById('copy-btn');
-
-    // Adiciona o "ouvinte" de evento de clique ao botão de checkout
-    checkoutButton.addEventListener('click', async () => {
-        // Desabilita o botão para evitar que o usuário clique várias vezes
-        checkoutButton.disabled = true;
-        checkoutButton.textContent = "Gerando QR Code...";
-
-       try {
-    // --- INÍCIO DA CORREÇÃO ---
-    // 1. Pega o elemento que mostra o preço total na tela
-    const totalPriceSpan = document.getElementById('total-price');
-    
-    // 2. Pega o texto do elemento (ex: "R$ 35,50")
-    const precoTexto = totalPriceSpan.textContent;
-    
-    // 3. Limpa o texto e o transforma em um número que a API entende (ex: 35.50)
-    const valorNumerico = parseFloat(precoTexto.replace('R$ ', '').replace(',', '.'));
-
-    // 4. Faz uma verificação para garantir que o valor é válido
-    if (isNaN(valorNumerico) || valorNumerico <= 0) {
-        throw new Error("O valor do carrinho é inválido. Por favor, adicione itens ao carrinho primeiro.");
-    }
-
-    // 5. Usa a variável 'valorNumerico' com o preço REAL para criar o pedido
-    const dadosDoPedido = {
-        transaction_amount: valorNumerico, // <- AQUI ESTÁ A MÁGICA! Usa o valor dinâmico.
-        description: "Pedido de Açaí em Casa"
-    };
-    // --- FIM DA CORREÇÃO ---
-
-    // O resto do código continua igual, fazendo a chamada para o seu servidor no Render
-    const response = await fetch('https://dzn.onrender.com/create_payment', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dadosDoPedido), // Envia os dados do pedido com o valor correto
-    });
-
-    const payment = await response.json(); // Pega a resposta do servidor
-
-    if (response.ok) {
-        // Se a resposta foi bem-sucedida...
-        // Esconde o botão de pagar e mostra a área do PIX
-        checkoutButton.style.display = 'none';
-        
-        // Se o elemento total-price estiver dentro do container do pix-container, ele será substituído.
-        // É melhor garantir que o pixContainer seja um elemento separado.
-        const pixContainer = document.getElementById('pix-container');
-        if(pixContainer){
-            pixContainer.style.display = 'block';
-            // Preenche a imagem do QR Code e o campo de texto com os dados recebidos
-            const qrCodeImage = document.getElementById('qr-code-image');
-            const qrCodeText = document.getElementById('qr-code-text');
-            qrCodeImage.src = `data:image/jpeg;base64,${payment.qr_code_base64}`;
-            qrCodeText.value = payment.qr_code_text;
-        }
-    } else {
-        // Se o servidor retornou um erro...
-        throw new Error(payment.error || 'Erro ao processar o pagamento.');
-    }
-
-} catch (error) {
-    console.error(error);
-    alert('Ops! Houve um erro ao gerar o QR Code. Tente novamente.');
-    // Reabilita o botão em caso de erro
-    const checkoutButton = document.getElementById('checkout-btn');
-    if(checkoutButton){
-        checkoutButton.disabled = false;
-        checkoutButton.textContent = "Finalizar e Pagar com Pix";
-    }
-}
-
-    // Adiciona a funcionalidade de copiar o código ao botão "Copiar"
-    copyButton.addEventListener('click', () => {
-        qrCodeText.select();
-        document.execCommand('copy');
-        alert('Código Pix copiado para a área de transferência!');
-    });
-</script>
   </body>
 </html>
